@@ -1,0 +1,13 @@
+language: python
+
+# travis does not support python <= 2.5 https://github.com/travis-ci/travis-ci/issues/8799
+matrix:
+  include:
+    - python: "3.8"
+      env: TOXENV=py36
+
+install:
+  - pip install -U tox-travis
+  
+script:
+  - tox 
